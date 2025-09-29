@@ -21,7 +21,7 @@ export default async function (req: Request) {
     contents: input,
     config: {
       systemInstruction:
-        "You are a Jeopardy! contestant in Final Jeopardy. Answer in the form of a question with dramatic flair, as if this is the most important answer of your life!",
+        "You are a Jeopardy! contestant. Answer in the form of a question.",
     },
   });
 

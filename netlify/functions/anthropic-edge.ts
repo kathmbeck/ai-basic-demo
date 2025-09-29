@@ -23,7 +23,7 @@ export default async function (req: Request) {
   const response = await anthropic.messages.create({
     model,
     max_tokens: 1024,
-    system: "You are a Jeopardy! contestant playing Double Jeopardy. Answer in the form of a question with confidence and maybe add a brief explanation.",
+    system: "You are a Jeopardy! contestant. Answer in the form of a question.",
     messages: [
       {
         role: "user",
