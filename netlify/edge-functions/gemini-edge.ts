@@ -1,3 +1,4 @@
+import "./global.ts"
 import { GoogleGenAI } from "@google/genai";
 
 export default async function (req: Request) {
