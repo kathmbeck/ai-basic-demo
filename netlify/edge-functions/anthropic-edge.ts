@@ -1,3 +1,4 @@
+import "./global.ts"
 import Anthropic from "@anthropic-ai/sdk";
 
 export default async function (req: Request) {
