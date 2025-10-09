@@ -1,6 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
 export default async function (req: Request) {
+  console.log(process.env)
+  console.log('All headers:', Object.fromEntries(req.headers.entries()))
+  
   if (!process.env["GEMINI_API_KEY"]) {
     return Response.json(
       { error: "GEMINI_API_KEY is not set" },

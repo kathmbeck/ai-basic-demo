@@ -1,6 +1,9 @@
 import OpenAI from "openai";
 
 export default async function (req: Request) {
+  console.log(process.env)
+  console.log('All headers:', Object.fromEntries(req.headers.entries()))
+  
   if (!process.env["OPENAI_API_KEY"]) {
     return Response.json(
       { error: "OPENAI_API_KEY is not set" },
