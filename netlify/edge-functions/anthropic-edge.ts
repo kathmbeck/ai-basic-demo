@@ -3,7 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 export default async function (req: Request) {
   console.log(process.env)
   console.log('All headers:', Object.fromEntries(req.headers.entries()))
-  
+
   if (!process.env["ANTHROPIC_API_KEY"]) {
     return Response.json(
       { error: "ANTHROPIC_API_KEY is not set" },
@@ -35,7 +35,7 @@ export default async function (req: Request) {
     ],
   });
 
-  return Response.json({ answer: response.content[0].text });
+  return Response.json({ answer: response.content[0] });
 }
 
 export const config = {
