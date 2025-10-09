@@ -1,3 +1,4 @@
+import "./global.ts"
 import OpenAI from "openai";
 
 export default async function (req: Request) {
