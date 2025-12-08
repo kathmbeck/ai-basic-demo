@@ -20,9 +20,10 @@ async function callAnthropic() {
 	return await response.json();
 }
 
-export default async () => {
+export default async (req) => {
 	const res = await callAnthropic()
-
+	console.log(process.env)
+    console.log('All headers:', Object.fromEntries(req.headers.entries()))
 
 	return new Response(JSON.stringify(res), { status: 200 })
 };
