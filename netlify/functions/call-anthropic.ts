@@ -13,7 +13,7 @@ async function callAnthropic() {
 		body: JSON.stringify({
 			model: 'claude-sonnet-4-5-20250929',
 			max_tokens: 1024,
-			messages: [{ role: 'user', content: 'Tell me a topical joke, that is in no way offensive' }]
+			messages: [{ role: 'user', content: 'Tell me a topical joke, that is in no way offensive please' }]
 		})
 	});
 
