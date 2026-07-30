@@ -16,7 +16,7 @@ export default async function (req: Request) {
     model?: string;
   } | null;
   const input = body?.message || "This streaming service launched in 2007 by Reed Hastings";
-  const model = body?.model || "claude-3-5-sonnet-20241022";
+  const model = body?.model || "claude-haiku-4-5";
   console.log("Making Anthropic Double Jeopardy request", {
     model,
     input,
