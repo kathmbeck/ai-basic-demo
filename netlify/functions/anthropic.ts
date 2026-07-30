@@ -13,7 +13,7 @@ export default async function (req: Request) {
     model?: string;
   } | null;
   const input = body?.message || "This four-letter country borders Vietnam";
-  const model = body?.model || "claude-3-5-haiku-20241022";
+  const model = body?.model || "claude-haiku-4-5";
   console.log("Making Anthropic request", {
     model: "claude-3-5-haiku-20241022",
     input,
