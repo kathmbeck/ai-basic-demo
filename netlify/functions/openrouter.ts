@@ -18,11 +18,9 @@ export default async function (req: Request) {
   const input = body?.message || "This four-letter country borders Vietnam";
   const model = body?.model || "z-ai/glm-5.2";
 
-  // The OpenRouter SDK reads OPENROUTER_API_KEY from the environment but no
-  // base URL, so serverURL must point it at the AI Gateway.
-  const client = new OpenRouter({
-    serverURL: process.env["OPENROUTER_BASE_URL"],
-  });
+  // Key and base URL are read from OPENROUTER_API_KEY / OPENROUTER_BASE_URL
+  // (SDK 1.2.43+).
+  const client = new OpenRouter();
   const response = await client.chat.send({
     chatRequest: {
       model,
